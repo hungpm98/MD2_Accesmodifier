@@ -22,7 +22,7 @@ class Data
         return json_decode($dataJson);// chuyển dữ liệu từ dạng chuỗi về dạng mảng liên kết hoặc object;
     }
 
-    public function AddNewEmployee($employee1)
+    public function addNewEmployee($employee1)
     {
         $data = [
             "surname" => $employee1->getSurname(),
@@ -34,5 +34,12 @@ class Data
         $employees = $this->loadData();
         $employees[] = $data;
         $this->saveData($employees); // lưu mảng vào data.json
+    }
+
+    public function deleteEmployee($id)
+    {
+        $employees = $this->loadData();
+        array_slice($employees, $id, 1);
+        $this->saveData($employees);
     }
 }

@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     $address = $_REQUEST["address"];
     $position = $_REQUEST["position"];
     $employee1 = new Employee($surname,$name,$dob,$address,$position);
-    $data->AddNewEmployee($employee1);
+    $data->addNewEmployee($employee1);
     header("location:index.php");
 }
 

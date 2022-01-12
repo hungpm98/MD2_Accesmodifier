@@ -16,9 +16,11 @@ $employees = $data->loadData();
 
     </head>
     <body>
+    <a href="Create.php">Create employee</a>
     <table border="1px" style="border-collapse: collapse" width="100%">
         <thead>
         <tr>
+
             <th>Họ</th>
             <th>Tên</th>
             <th>Ngày sinh</th>
@@ -36,7 +38,7 @@ $employees = $data->loadData();
                 <td><?php echo $employee->dob ?></td>
                 <td><?php echo $employee->address ?></td>
                 <td><?php echo $employee->position ?></td>
-                <td><a href="Create.php">tao employee</a></td>
+
             </tr>
         <?php endforeach; ?>
         </tbody>
